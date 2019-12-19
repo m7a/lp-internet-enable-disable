@@ -1,3 +1,9 @@
+mdvl-internet-enable-disable (1.0.2) stable; urgency=medium
+
+  * Properly include desktop files in the installed package.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Thu, 19 Dec 2019 19:03:00 +0100
+
 mdvl-internet-enable-disable (1.0.1) stable; urgency=medium
 
   * First build with CI.

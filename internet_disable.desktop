@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Internet Abschalten
+Exec=/bin/sh -ec "sudo internet_disable && xmessage Internet deaktiviert."
+Type=Application

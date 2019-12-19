@@ -5,7 +5,8 @@
 <property name="mdpc.name"    value="mdvl-internet-enable-disable"/>
 <property name="mdpc.section" value="admin"/>
 <property name="mdpc.arch"    value="all"/>
-<property name="mdpc.depends" value="sudo, ufw"/>
+<!-- x11-utils for xmessage -->
+<property name="mdpc.depends" value="sudo, ufw, x11-utils"/>
 <property name="mdpc.descrs"
 		value="Scripts to open/close firewall for outgoing traffic"/>
 <property name="mdpc.descrl">
@@ -18,6 +19,8 @@
 <property name="mdpc.file.install">
 internet_enable /usr/bin
 internet_disable /usr/bin
+internet_enable.desktop /usr/share/mdvl-internet-enable-disable
+internet_disable.desktop /usr/share/mdvl-internet-enable-disable
 55-masysma-internet-enable-disable /etc/sudoers.d
 </property>
 
