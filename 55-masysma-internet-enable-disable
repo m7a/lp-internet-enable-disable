@@ -1,0 +1,10 @@
+# Ma_Sys.ma sudo configuration for internet_enable, internet_disable.
+# Copyright (c) 2019 Ma_Sys.ma.
+# For further info send an e-mail to Ma_Sys.ma@web.de.
+#
+# This scripts are intended for client usage.
+
+Cmnd_Alias	INTERNETENABLE = /usr/bin/internet_enable
+linux-fan	ALL=NOPASSWD: INTERNETENABLE
+Cmnd_Alias	INTERNETDISABLE = /usr/bin/internet_disable
+linux-fan	ALL=NOPASSWD: INTERNETDISABLE

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+
+<!-- APPLICATION METADATA -->
+<property name="mdpc.name"    value="mdvl-internet-enable-disable"/>
+<property name="mdpc.section" value="admin"/>
+<property name="mdpc.arch"    value="all"/>
+<property name="mdpc.depends" value="sudo, ufw"/>
+<property name="mdpc.descrs"
+		value="Scripts to open/close firewall for outgoing traffic"/>
+<property name="mdpc.descrl">
+ Provides a sudo configuration and two scripts:
+ internet_enable  -- ufw default allow  outgoing
+ internet_disable -- ufw default reject outgoing
+ This allows disabling internet access from user linux-fan.
+</property>
+
+<property name="mdpc.file.install">
+internet_enable /usr/bin
+internet_disable /usr/bin
+55-masysma-internet-enable-disable /etc/sudoers.d
+</property>
+
+<!-- CI INTEGRATION -->
+<target name="package_triggered" depends="package">
+	<property name="masysma.ci.trigger" value="newver"/>
+</target>
+
+<!-- CONST TPL IMPORT -->
+<property environment="env"/>
+<condition property="masysma.internal.includepath.rel" value="${env.MDVL_CI_PHOENIX_ROOT}" else=".."><isset property="env.MDVL_CI_PHOENIX_ROOT"/></condition>
+<property name="masysma.internal.includepath" location="${masysma.internal.includepath.rel}"/>
+<property name="masysma.internal.loadpath" value="${masysma.internal.includepath}/co-build/ant-build-template.xml"/>
+<condition property="masysma.internal.load" value="file://${masysma.internal.loadpath}" else="https://raw.githubusercontent.com/m7a/co-build/master/ant-build-template.xml"><resourceexists><file file="${masysma.internal.loadpath}"/></resourceexists></condition>
+<import><url url="${masysma.internal.load}"/></import>
+
+</project>
