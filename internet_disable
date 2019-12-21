@@ -1,2 +1,2 @@
 #!/bin/sh -e
-exec /usr/sbin/ufw default reject outgoing
+exec /usr/sbin/ufw default reject outgoing # 2019 Ma_Sys.ma

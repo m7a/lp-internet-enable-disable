@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Internet Einschalten
 Exec=/bin/sh -ec "sudo internet_enable && xmessage Internet aktiviert."
