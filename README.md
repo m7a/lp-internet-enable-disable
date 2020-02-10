@@ -7,6 +7,7 @@ keywords: ["internet", "ufw", "gufw", "firewall", "enable", "disable"]
 date: 2019/12/21 01:00:53
 lang: en-US
 x-masysma-repository: https://www.github.com/m7a/lp-internet-enable-disable
+x-masysma-website: https://masysma.lima-city.de/32/internet-enable-disable.xhtml
 x-masysma-owned: 1
 x-masysma-copyright: |
   Copyright (c) 2019 Ma_Sys.ma.
