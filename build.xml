@@ -25,9 +25,7 @@ internet_disable.desktop /usr/share/mdvl-internet-enable-disable
 </property>
 
 <!-- CI INTEGRATION -->
-<target name="package_triggered" depends="package">
-	<property name="masysma.ci.trigger" value="newver"/>
-</target>
+<target name="autoci" depends="autopackage"/>
 
 <!-- CONST TPL IMPORT -->
 <property environment="env"/>
